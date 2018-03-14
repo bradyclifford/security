@@ -54,6 +54,17 @@ The authenticated state of the victim is abused and the browser tricked into iss
 * Automate security configuration using transforms
 
 ## Insecure Cryptographic Storage
+* Cryptographic storage is the last line of defence
+* Password hashing is all about trying to slow the process down in order to increase the time and cost of cracking
+  * Creating higher workloads with approaches like `PBKDF2` and `brcypt` is the best defence
+* Key management is importat; `DPAPI` makes it easy to solve but inroduces othe problems (which are?)
+* Character rotation and encoding aren't cryptographic!
+
 ### Tools
 * `Hastcat` used to compute hashes
-* `Zetetic.Security` uses 5,000 computations of PBKDF2, and 2^10 rounds of bcrype. Takes 50 days to crack.
+* `Zetetic.Security` uses 5,000 computations of `PBKDF2`, and 2^10 rounds of `bcrypt`. Takes 50 days to crack.
+
+### Terms
+* Hasing: one way, not encryption
+* Symmetric encryption: single private key for both encryption and decryption
+* Asymmetric encryption: both a public and private key
