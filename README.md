@@ -57,7 +57,7 @@ The authenticated state of the victim is abused and the browser tricked into iss
 * Cryptographic storage is the last line of defence
 * Password hashing is all about trying to slow the process down in order to increase the time and cost of cracking
   * Creating higher workloads with approaches like `PBKDF2` and `brcypt` is the best defence
-* Key management is importat; `DPAPI` makes it easy to solve but inroduces othe problems (which are?)
+* Key management is importat; `DPAPI` makes it easy to solve but inroduces othe problems (multiple machines, local key)
 * Character rotation and encoding aren't cryptographic!
 
 ### Tools
