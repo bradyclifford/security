@@ -1,6 +1,8 @@
 # Overview
 
-# Injection
+# OWASP Top 10
+
+## Injection
 * Apply the principle of least privilege to the database account
 * Always parameterise untrusted data
 * Stored procedures also offer protection via parameterisation
@@ -14,17 +16,17 @@
 * Use ORMs and their native ability to parameterise
 * Remeber the ease of exploitation by automated tools
 
-# Cross Site Scripting (XSS)
+## Cross Site Scripting (XSS)
 * Output encoding is the cornerstone of XSS protection
 * Code your application as though you have persistent XSS in the database
 * Expect attackers to use obfuscated URLs
 
-# Broken Authentication and Session Management
+## Broken Authentication and Session Management
 * Keep session Ids out of the URL, use cookie instead
   * Don't expect anything in the URL to be secure
 * If possible, disable sliding forms authentication expiration
 
-# Insecure Direct Object References
+## Insecure Direct Object References
 Use:
 ```
 https://site.com/user?id=fasdfasdfasdfasdf23rq3regwtq34254365q25r13r
@@ -38,9 +40,16 @@ https://site.com/user?id=1
 * Surrogate key only adds further obfuscation; a `GUID` is a good example
   * GUID is slower than an integar and they take up more space
 
-# Cross Site Requiest Forgery (CSRF)
+#3 Cross Site Requiest Forgery (CSRF)
 Uses the cookie authentication for the domain site and sends a request to the same domain site.  A legitimate request is reconstructed into one with malicious intent.
 
 The authenticated state of the victim is abused and the browser tricked into issuing the request.
 
 * Use Anti-forgery tokens
+
+## Security Misconfiguration
+* Don't expose descriptive errors to the client in production
+* Keep frameworks current
+* Protect sensitive data in the configuration files
+* Automate security configuration using transforms
+
