@@ -14,7 +14,15 @@
 * Use ORMs and their native ability to parameterise
 * Remeber the ease of exploitation by automated tools
 
-# Brken Authentication and Session Management
+# Cross Site Scripting (XSS)
+* Output encoding is the cornerstone of XSS protection
+* Code your application as though you have persistent XSS in the database
+* Expect attackers to use obfuscated URLs
+
+# Broken Authentication and Session Management
 * Keep session Ids out of the URL, use cookie instead
   * Don't expect anything in the URL to be secure
 * If possible, disable sliding forms authentication expiration
+
+# Insecure Direct Object References
+* 
