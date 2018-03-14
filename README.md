@@ -37,3 +37,10 @@ https://site.com/user?id=1
 * Indirect references can be used to concel internal keys
 * Surrogate key only adds further obfuscation; a `GUID` is a good example
   * GUID is slower than an integar and they take up more space
+
+# Cross Site Requiest Forgery (CSRF)
+Uses the cookie authentication for the domain site and sends a request to the same domain site.  A legitimate request is reconstructed into one with malicious intent.
+
+The authenticated state of the victim is abused and the browser tricked into issuing the request.
+
+* Use Anti-forgery tokens
