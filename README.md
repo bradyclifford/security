@@ -25,4 +25,15 @@
 * If possible, disable sliding forms authentication expiration
 
 # Insecure Direct Object References
-* 
+Use:
+```
+https://site.com/user?id=fasdfasdfasdfasdf23rq3regwtq34254365q25r13r
+```
+Instead of:
+```
+https://site.com/user?id=1
+```
+* Access controls are most fundemental. Does the authenticated user have authorization to that resource?
+* Indirect references can be used to concel internal keys
+* Surrogate key only adds further obfuscation; a `GUID` is a good example
+  * GUID is slower than an integar and they take up more space
