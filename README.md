@@ -53,3 +53,7 @@ The authenticated state of the victim is abused and the browser tricked into iss
 * Protect sensitive data in the configuration files
 * Automate security configuration using transforms
 
+## Insecure Cryptographic Storage
+### Tools
+* `Hastcat` used to compute hashes
+* `Zetetic.Security` uses 5,000 computations of PBKDF2, and 2^10 rounds of bcrype. Takes 50 days to crack.
