@@ -2,7 +2,7 @@
 
 # OWASP Top 10
 
-## Injection
+## 1. Injection
 * Apply the principle of least privilege to the database account
 * Always parameterise untrusted data
 * Stored procedures also offer protection via parameterisation
@@ -16,17 +16,17 @@
 * Use ORMs and their native ability to parameterise
 * Remeber the ease of exploitation by automated tools
 
-## Cross Site Scripting (XSS)
+## 2. Cross Site Scripting (XSS)
 * Output encoding is the cornerstone of XSS protection
 * Code your application as though you have persistent XSS in the database
 * Expect attackers to use obfuscated URLs
 
-## Broken Authentication and Session Management
+## 3. Broken Authentication and Session Management
 * Keep session Ids out of the URL, use cookie instead
   * Don't expect anything in the URL to be secure
 * If possible, disable sliding forms authentication expiration
 
-## Insecure Direct Object References
+## 4. Insecure Direct Object References
 Use:
 ```
 https://site.com/user?id=fasdfasdfasdfasdf23rq3regwtq34254365q25r13r
@@ -47,13 +47,13 @@ The authenticated state of the victim is abused and the browser tricked into iss
 
 * Use Anti-forgery tokens
 
-## Security Misconfiguration
+## 5. Security Misconfiguration
 * Don't expose descriptive errors to the client in production
 * Keep frameworks current
 * Protect sensitive data in the configuration files
 * Automate security configuration using transforms
 
-## Insecure Cryptographic Storage
+## 6. Insecure Cryptographic Storage
 * Cryptographic storage is the last line of defence
 * Password hashing is all about trying to slow the process down in order to increase the time and cost of cracking
   * Creating higher workloads with approaches like `PBKDF2` and `brcypt` is the best defence
@@ -68,3 +68,7 @@ The authenticated state of the victim is abused and the browser tricked into iss
 * Hasing: one way, not encryption
 * Symmetric encryption: single private key for both encryption and decryption
 * Asymmetric encryption: both a public and private key
+
+## 7. Failure to Restrict URL Access
+...
+## 8. Insufficent Transport Layer Protection
