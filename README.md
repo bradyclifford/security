@@ -72,3 +72,24 @@ The authenticated state of the victim is abused and the browser tricked into iss
 ## 7. Failure to Restrict URL Access
 ...
 ## 8. Insufficent Transport Layer Protection
+* Cookies can be sensitive due to what they allow the attacker to do; flag them as secure
+* Make sure that resources which require secure connections cannot be loaded over HTTP
+Use HSTS for secure sites
+* Avoid security anti-patterns
+  * Loading login forms over HTTP, even if they post to HTTPS
+  * Loading HTTPS login forms inside an iframe on an HTTP page
+  * Login page should never be allowed to load over HTTP
+  * Passing sensitive data such as credentials in HTTP addresses
+* SSL has some overhead, just not much and its also not fool proof
+
+*Protocal URL*: instead of defining the protocal, `http://somedomain.com`, substitute with `//somedomain.com/folder/`.  It will automatically add the protocal prefix being used.
+
+`HSTS` possibly can add a header to restrict HTTP requests.
+```
+Strict-Transport-Security max-age=3153600 
+// for the next seconds (12 months), 
+// browser may not make an HTTP request to the site
+```
+
+Anti TLS patterns
+
