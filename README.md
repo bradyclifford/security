@@ -40,20 +40,20 @@ https://site.com/user?id=1
 * Surrogate key only adds further obfuscation; a `GUID` is a good example
   * GUID is slower than an integar and they take up more space
 
-#3 Cross Site Requiest Forgery (CSRF)
+## 5. Cross Site Requiest Forgery (CSRF)
 Uses the cookie authentication for the domain site and sends a request to the same domain site.  A legitimate request is reconstructed into one with malicious intent.
 
 The authenticated state of the victim is abused and the browser tricked into issuing the request.
 
 * Use Anti-forgery tokens
 
-## 5. Security Misconfiguration
+## 6. Security Misconfiguration
 * Don't expose descriptive errors to the client in production
 * Keep frameworks current
 * Protect sensitive data in the configuration files
 * Automate security configuration using transforms
 
-## 6. Insecure Cryptographic Storage
+## 7. Insecure Cryptographic Storage
 * Cryptographic storage is the last line of defence
 * Password hashing is all about trying to slow the process down in order to increase the time and cost of cracking
   * Creating higher workloads with approaches like `PBKDF2` and `brcypt` is the best defence
@@ -69,9 +69,10 @@ The authenticated state of the victim is abused and the browser tricked into iss
 * Symmetric encryption: single private key for both encryption and decryption
 * Asymmetric encryption: both a public and private key
 
-## 7. Failure to Restrict URL Access
+## 8. Failure to Restrict URL Access
 ...
-## 8. Insufficent Transport Layer Protection
+
+## 9. Insufficent Transport Layer Protection
 * Cookies can be sensitive due to what they allow the attacker to do; flag them as secure
 * Make sure that resources which require secure connections cannot be loaded over HTTP
 Use HSTS for secure sites
@@ -91,5 +92,9 @@ Strict-Transport-Security max-age=3153600
 // browser may not make an HTTP request to the site
 ```
 
-Anti TLS patterns
+## 10. Unvalidated Redirects and Forwards
+Unvalidated redirects pose value to attackers as they provide a legitimate point from which to launch an attack.
 
+* There is a valid use case for redirects, but usually only for forwarding a user to trusted address; use a whitelist access control
+* Referrer checking can mitigate the risk, but not entirely eradicate it
+* Not always vieweed as a major risk
