@@ -1,21 +1,23 @@
 # Overview
 
 # Thread Modeling
-1. *Decompose*: system will need to be understood and anayzed
-1. *Identify*: threats will need to be categorized and ranked
-1. *Control*: countermeasures and mitigations will need to be detailed
+1. **Decompose**: system will need to be understood and anayzed
+1. **Identify**: threats will need to be categorized and ranked
+1. **Control**: countermeasures and mitigations will need to be detailed
 
 ## Determining Risk
 `DREAD`
 
-* *D*amage
-* *R*eproducibility
-* *E*xploitablility
-* *A*ffected Users
-* *D*iscoverability
+* **D**amage
+* **R**eproducibility
+* **E**xploitablility
+* **A**ffected Users
+* **D**iscoverability
 
-`Low = 1 Medium = 2 High = 3`
-`(D + R + E + A + D) / 5 = Risk`
+```
+Low = 1 Medium = 2 High = 3
+`(D + R + E + A + D) / 5 = Risk
+```
 
 # OWASP Top 10
 
