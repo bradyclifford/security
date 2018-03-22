@@ -19,6 +19,20 @@ Low = 1 Medium = 2 High = 3
 `(D + R + E + A + D) / 5 = Risk
 ```
 
+# Application Penetration Tests
+## Tools
+* Automated Tools (http://tools.kali.org)
+  * Burp
+  * OWASP ZAP
+  * Nessus
+  * Nexpose
+  * IBM App Scan
+  * Nikto
+* Httpprint: fingerprinting
+* Firefox Wappalyzer Addon: what technology is the site using
+* Foca: searches for all urls that have unauthorized access on a site
+  * www.exploit-db.com/google-hacking-databases
+
 # OWASP Top 10
 
 ## 1. Injection
